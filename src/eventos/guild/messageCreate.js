@@ -46,7 +46,17 @@ module.exports = async (client, message) => {
     
     
   
+  //poner el prefix de tu bot 
+    
+  prefix = ["l!", "L!"]
 
+  if (message.author.bot) return;
+  if (message.channel.type == 'dm') return;
+
+  if (message.content.startsWith(prefix[0]) || message.content.startsWith(prefix[1])) {
+    client.api.channels(message.channel.id).typing.post();
+  }
+  
 
     try {
       // ejecutar el comando

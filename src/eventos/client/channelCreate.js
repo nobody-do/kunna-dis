@@ -1,6 +1,6 @@
 const { AuditLogEvent, EmbedBuilder } = require('discord.js')
 module.exports = async (client, member) => {
-  const channelID = '1125138204044046447'
+  const channelID = '1176140729651839007'
   const channel = member.guild.channels.cache.get(channelID)
   channel.guild
     .fetchAuditLogs({
